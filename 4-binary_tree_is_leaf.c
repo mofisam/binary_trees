@@ -12,7 +12,7 @@
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	// If node is NULL or has either left or right child, it's not a leaf
+	/*If node is NULL or has either left or right child, it's not a leaf*/
 	if (node == NULL || node->left != NULL || node->right != NULL)
 		return (0);
 

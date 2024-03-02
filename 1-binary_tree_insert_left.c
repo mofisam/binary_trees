@@ -17,25 +17,25 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new;
 
-	// Check if parent node is NULL
+	/*Check if parent node is NULL*/
 	if (parent == NULL)
 		return (NULL);
 
-	// Create a new node with the given value
+	/*Create a new node with the given value*/
 	new = binary_tree_node(parent, value);
-	// Check if memory allocation failed
+	/*Check if memory allocation failed*/
 	if (new == NULL)
 		return (NULL);
 
-	// If parent already has a left child
+	/*If parent already has a left child*/
 	if (parent->left != NULL)
 	{
-		// Make the new node's left child point to the existing left child
+		/*Make the new node's left child point to the existing left child*/
 		new->left = parent->left;
-		// Update the existing left child's parent to be the new node
+		/*Update the existing left child's parent to be the new node*/
 		parent->left->parent = new;
 	}
-	// Set the new node as the left child of the parent
+	/*Set the new node as the left child of the parent*/
 	parent->left = new;
 
 	return (new);

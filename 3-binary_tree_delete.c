@@ -14,11 +14,11 @@ void binary_tree_delete(binary_tree_t *tree)
 	// Check if tree is not NULL
 	if (tree != NULL)
 	{
-		// Recursively delete the left subtree
+		/*Recursively delete the left subtree*/
 		binary_tree_delete(tree->left);
-		// Recursively delete the right subtree
+		/*Recursively delete the right subtree*/
 		binary_tree_delete(tree->right);
-		// Free memory allocated for the current node
+		/*Free memory allocated for the current node*/
 		free(tree);
 	}
 }
